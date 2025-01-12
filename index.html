@@ -1,84 +1,69 @@
+<!-- Código do site (head e body) -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmação de Compra</title>
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSCPRC5P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i) {
-      w[l] = w[l] || [];
-      w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-      var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WSCPRC5P');
-  </script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s) {
-      if(f.fbq)return; n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-      n.queue=[]; t=b.createElement(e); t.async=!0;
-      t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)
-    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '927943742783974'); // Seu Pixel ID
-    fbq('track', 'PageView');
-    fbq('track', 'Purchase', {value: 14.99, currency: 'BRL'});
-  </script>
-  <!-- End Facebook Pixel -->
-
-  <!-- Pushcut Notification -->
-  <script>
-    function enviarNotificacaoCompra() {
-      var urlWebhook = 'https://api.pushcut.io/Ihn-F2bH9UPrbTfwjRKHS/notifications/vendas';
-
-      var data = {
-        "title": "Nova Compra Confirmada!",
-        "message": "Uma nova compra foi realizada no seu site. Confira os detalhes.",
-        "priority": "high"
-      };
-
-      fetch(urlWebhook, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then(response => {
-        console.log('Notificação enviada com sucesso', response);
-      }).catch(error => {
-        console.error('Erro ao enviar notificação', error);
-      });
-    }
-
-    // Envia a notificação de compra
-    enviarNotificacaoCompra();
-  </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo VIP</title>
+    <!-- Link para o seu Pixel (se já tiver configurado) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_PIXEL_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_PIXEL_ID');
+    </script>
+    <!-- Google Tag Manager (se aplicável) -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','YOUR_GTM_ID');
+    </script>
 </head>
 <body>
+    <h1>Bem-vindo ao Grupo VIP! 💥</h1>
+    <p>Você está prestes a ser redirecionado para o nosso site exclusivo!</p>
+    
+    <script>
+        // Função que envia a notificação para Pushcut
+        function sendPushcutNotification() {
+            const url = 'https://api.pushcut.io/Ihn-F2bH9UPrbTfwjRKHS/notifications/vendas';
 
-  <!-- Conteúdo da página de confirmação de compra -->
-  <h1>Obrigado pela sua compra!</h1>
-  <p>Seu pagamento foi confirmado. Em breve você receberá o produto.</p>
+            // Configuração da mensagem que será enviada na notificação
+            const data = {
+                "title": "Venda Aprovada!✅",
+                "body": "Uma nova compra foi realizada no seu site! 🎉 Valor: R$14,99.",
+                "priority": "high"
+            };
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSCPRC5P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+            // Envia a notificação para o Pushcut via POST
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Notificação enviada com sucesso:', data);
+            })
+            .catch((error) => {
+                console.error('Erro ao enviar notificação:', error);
+            });
+        }
 
+        // Função para redirecionar para o grupo VIP
+        function redirectToVIP() {
+            // Redirecionando para o site do grupo VIP
+            window.location.href = 'https://grupovip-gamma.vercel.app/';
+        }
+
+        // Chamando as funções de notificação e redirecionamento quando a compra for confirmada
+        sendPushcutNotification();  // Envia a notificação
+        redirectToVIP();  // Redireciona para o site do grupo VIP
+    </script>
 </body>
 </html>
