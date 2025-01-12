@@ -3,94 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesse Aqui o VIP 🔥</title>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WSCPRC5P');</script>
-    <!-- End Google Tag Manager -->
+    <title>Acesse o VIP 🔥</title>
 
     <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+        }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '927943742783974'); 
         fbq('track', 'PageView');
         fbq('track', 'Purchase', {value: 14.99, currency: 'BRL'});
     </script>
     <!-- End Meta Pixel Code -->
 
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WSCPRC5P');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <style>
         body {
-            background-color: #6a0dad; /* Roxo */
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            background: linear-gradient(135deg, #7c1e8c, #2b0a45);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            text-align: center;
         }
 
         .container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
             padding: 50px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5rem;
+            color: #ff4081;
             margin-bottom: 20px;
         }
 
+        p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
         .highlight {
-            color: #ff6347;
+            font-weight: bold;
+            color: #ffeb3b;
         }
 
         .emoji {
-            font-size: 2em;
+            font-size: 2rem;
         }
 
         .cta-button {
-            background-color: #ff6347; /* Vermelho */
-            color: white;
-            font-size: 1.5em;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
             display: inline-block;
-            margin-top: 20px;
+            padding: 20px 30px;
+            background-color: #ff4081;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            margin-top: 30px;
+            transition: all 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #ff4500; /* Laranja escuro */
+            background-color: #ff3366;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .footer {
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #cccccc;
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
+
 </head>
 <body>
+    <div class="container">
+        <h1>🔥 Bem-vindo ao VIP 🔥</h1>
+        <p>Você está prestes a descobrir o <span class="highlight">prazer mais intenso</span> da sua vida! 😏</p>
+        <p class="emoji">✨💦😈</p>
+        <p>Não perca tempo, clique abaixo para acessar <span class="highlight">todo o conteúdo exclusivo</span> que preparei especialmente para você!</p>
+        <a href="https://t.me/+AkJogaG9ZFUzN2Nh" target="_blank" class="cta-button">Acessar o VIP Agora 🔥</a>
+        <div class="footer">
+            <p>© 2025 - Conteúdo Exclusivo. Todos os direitos reservados.</p>
+            <p>Site feito com muito <a href="#">amor e dedicação</a>.</p>
+        </div>
+    </div>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSCPRC5P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <div class="container">
-        <h1>🔥 Bem-vindo ao VIP 🔥</h1>
-        <p>💎 Está pronto para o <span class="highlight">prazer mais intenso</span> da sua vida?</p>
-        <p class="emoji">✨💦😈</p>
-        <p>🎁 Clique no botão abaixo e desbloqueie <span class="highlight">todo o conteúdo exclusivo</span> que preparei só para você!</p>
-        <a href="https://t.me/+AkJogaG9ZFUzN2Nh" target="_blank" class="cta-button">Acessar o VIP Agora 🔥</a>
-        <div class="footer">© 2025 - Conteúdo Exclusivo. Todos os direitos reservados.</div>
-    </div>
 
 </body>
 </html>
