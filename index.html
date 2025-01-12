@@ -1,69 +1,201 @@
-<!-- Código do site (head e body) -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo VIP</title>
-    <!-- Link para o seu Pixel (se já tiver configurado) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_PIXEL_ID"></script>
+    <title>Acesse o VIP 🔥</title>
+
+    <!-- Meta Pixel Code -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_PIXEL_ID');
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+        }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '927943742783974'); 
+        fbq('track', 'PageView');
+        fbq('track', 'Purchase', {value: 14.99, currency: 'BRL'});
     </script>
-    <!-- Google Tag Manager (se aplicável) -->
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Tag Manager -->
     <script>
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','YOUR_GTM_ID');
+        })(window,document,'script','dataLayer','GTM-WSCPRC5P');
     </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Pushcut Notification -->
+    <script>
+        // Pushcut API - Substitua pela sua URL de API Pushcut
+        fetch('https://api.pushcut.io/YOUR_API_KEY/trigger', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                "title": "Venda Aprovada!✅",
+                "message": "A sua venda foi aprovada com sucesso! 🔥",
+                "priority": "high"
+            })
+        });
+    </script>
+
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #FF4081;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .emoji {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        .cta-button {
+            padding: 18px 30px;
+            font-size: 1.5rem;
+            background: linear-gradient(45deg, #ff4081, #ff5252);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(45deg, #ff5252, #ff4081);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .footer {
+            font-size: 1rem;
+            margin-top: 20px;
+            color: #ccc;
+            font-weight: 400;
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 15px 25px;
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .cta-button {
+                padding: 12px 22px;
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Bem-vindo ao Grupo VIP! 💥</h1>
-    <p>Você está prestes a ser redirecionado para o nosso site exclusivo!</p>
-    
-    <script>
-        // Função que envia a notificação para Pushcut
-        function sendPushcutNotification() {
-            const url = 'https://api.pushcut.io/Ihn-F2bH9UPrbTfwjRKHS/notifications/vendas';
 
-            // Configuração da mensagem que será enviada na notificação
-            const data = {
-                "title": "Venda Aprovada!✅",
-                "body": "Uma nova compra foi realizada no seu site! 🎉 Valor: R$14,99.",
-                "priority": "high"
-            };
+    <div class="container">
+        <h1>🔥 Bem-vindo ao VIP 🔥</h1>
+        <p>Prepare-se para acessar o <span class="highlight">conteúdo exclusivo</span> mais quente da internet!</p>
+        <p class="emoji">💋🔥💦</p>
+        <p>Com apenas um clique, você entra no nosso espaço VIP e descobre tudo o que temos para você.</p>
+        <a href="https://t.me/+AkJogaG9ZFUzN2Nh" target="_blank" class="cta-button">Acesse Agora 🔥</a>
+        <div class="footer">
+            <p>© 2025 - Conteúdo Exclusivo. Todos os direitos reservados.</p>
+            <p>Site criado com <a href="#">dedicação</a> e muito amor.</p>
+        </div>
+    </div>
 
-            // Envia a notificação para o Pushcut via POST
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Notificação enviada com sucesso:', data);
-            })
-            .catch((error) => {
-                console.error('Erro ao enviar notificação:', error);
-            });
-        }
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSCPRC5P"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-        // Função para redirecionar para o grupo VIP
-        function redirectToVIP() {
-            // Redirecionando para o site do grupo VIP
-            window.location.href = 'https://grupovip-gamma.vercel.app/';
-        }
-
-        // Chamando as funções de notificação e redirecionamento quando a compra for confirmada
-        sendPushcutNotification();  // Envia a notificação
-        redirectToVIP();  // Redireciona para o site do grupo VIP
-    </script>
 </body>
 </html>
