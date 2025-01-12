@@ -31,27 +31,34 @@
     <!-- End Google Tag Manager -->
 
     <style>
-        body {
-            background: linear-gradient(135deg, #7c1e8c, #2b0a45);
-            color: #fff;
-            font-family: 'Poppins', sans-serif;
+        /* Reset default styles */
+        * {
             margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+            color: white;
             min-height: 100vh;
-            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 15px;
-            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
             width: 90%;
-            max-width: 450px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
+            max-width: 400px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
         }
 
         .container:hover {
@@ -59,74 +66,113 @@
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #ff4081;
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #FF4081;
             margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin: 15px 0;
-            line-height: 1.5;
-            font-weight: 500;
         }
 
         .highlight {
             font-weight: bold;
-            color: #ffeb3b;
+            color: #FFD700;
         }
 
         .emoji {
-            font-size: 2rem;
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-weight: 500;
+            margin: 15px 0;
         }
 
         .cta-button {
-            display: inline-block;
-            padding: 20px 30px;
-            background-color: #ff4081;
+            padding: 18px 30px;
+            font-size: 1.5rem;
+            background: linear-gradient(45deg, #ff4081, #ff5252);
             color: #fff;
-            font-size: 1.4rem;
-            font-weight: bold;
-            border-radius: 25px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
             text-decoration: none;
-            margin-top: 30px;
+            border-radius: 50px;
+            font-weight: bold;
             transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
 
         .cta-button:hover {
-            background-color: #ff3366;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #ff5252, #ff4081);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
         }
 
         .footer {
-            font-size: 0.9rem;
+            font-size: 1rem;
+            margin-top: 20px;
             color: #ccc;
-            margin-top: 30px;
+            font-weight: 400;
         }
 
         .footer a {
-            color: #ffeb3b;
+            color: #FFD700;
             text-decoration: none;
         }
 
         .footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 15px 25px;
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .cta-button {
+                padding: 12px 22px;
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 
 </head>
 <body>
+
     <div class="container">
         <h1>🔥 Bem-vindo ao VIP 🔥</h1>
-        <p>Você está prestes a descobrir o <span class="highlight">prazer mais intenso</span> da sua vida! 😏</p>
-        <p class="emoji">✨💦😈</p>
-        <p>Não perca tempo, clique abaixo para acessar <span class="highlight">todo o conteúdo exclusivo</span> que preparei especialmente para você!</p>
-        <a href="https://t.me/+AkJogaG9ZFUzN2Nh" target="_blank" class="cta-button">Acessar o VIP Agora 🔥</a>
+        <p>Prepare-se para acessar o <span class="highlight">conteúdo exclusivo</span> mais quente da internet!</p>
+        <p class="emoji">💋🔥💦</p>
+        <p>Com apenas um clique, você entra no nosso espaço VIP e descobre tudo o que temos para você.</p>
+        <a href="https://t.me/+AkJogaG9ZFUzN2Nh" target="_blank" class="cta-button">Acesse Agora 🔥</a>
         <div class="footer">
             <p>© 2025 - Conteúdo Exclusivo. Todos os direitos reservados.</p>
-            <p>Site feito com muito <a href="#">amor e dedicação</a>.</p>
+            <p>Site criado com <a href="#">dedicação</a> e muito amor.</p>
         </div>
     </div>
 
