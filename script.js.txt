@@ -1,0 +1,9 @@
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const ctaButton = document.querySelector('.cta-button');
+
+    // Função para rastrear o clique no botão (se você estiver usando o Pixel do Facebook)
+    ctaButton.addEventListener('click', function() {
+        fbq('track', 'Purchase');
+    });
+});
